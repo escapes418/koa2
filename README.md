@@ -6,3 +6,43 @@ koa是一个基于node实现的一个新的web框架，它是由express框架的
 这个项目虽然功能比较单一，但是还是决定按MVC的规范来比较好。
 
 #### 文件结构
+
+```
+├── Koa2
+│   ├── config
+│   │   ├── DBconfig.js// 数据库配置文件
+|   ├── controller
+|   |   ├──userController.js
+|   ├── lib
+|   |   ├──mysql.js //连接Mysql
+|   ├── router
+|   |   ├──index.js // 总路由
+|   ├── service
+|   |   ├──user.js 
+|   ├── index.js //入口文件
+└── ── package.json
+```
+文件结构尽量模仿了MVC架构开发。核心代码就是Koa2目录下的五个文件
+
+- index.js 是整个koa2 的入口文件，注册了router和各种中间件。
+- config是数据库的配置文件，里面DBconfig.js来统一管理数据库的配置。
+- controller 文件夹MVC架构下的controller层router 文件夹来处理不同的路径请求，导入到对应的controller
+- service 文件夹是MVC的业务层，处理来自controller的数据，查询后数据库处理后返回处理后的数据
+- package.json 配置文件
+
+#### 数据库配置
+
+
+```
+//Koa2/config/DBcongfig.js
+/*数据库默认配置*/
+const database ={
+    database: 'escappe', //数据库名称
+    user: 'root', //mysql用户名
+    password: '123456', //mysql密码
+    PORT: '3306', //mysql端口号
+    host: "127.0.0.1" //服务器ip
+}
+module.exports = database
+
+```
