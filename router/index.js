@@ -18,6 +18,8 @@ router.get('/register', async (ctx, next) => {
             <p><input type="submit" value="Submit"></p>
         </form>`;
 });
+
+router.get('/captcha', controller.getCaptcha);
 router.post('/login', controller.checkLogin);
 router.post("/register",controller.regsiterUser);
 module.exports = router

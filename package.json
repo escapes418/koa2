@@ -15,7 +15,9 @@
     "mysql": "^2.17.1",
     "koa-body": "^4.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "svg-captcha": "^1.4.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index"

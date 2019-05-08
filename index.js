@@ -9,4 +9,4 @@ app.use(router.routes());
 
 
 app.listen(3000);
-console.log('[demo] start-quick is starting at port 3000')
+console.log('[demo] start-quick is starting at port http://127.0.0.1:3000')
